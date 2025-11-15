@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascend Advisory | UAE Tax, Accounting, Auditing & Advisory</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS adapted for White Background: Clean, professional, blue/teal accents. */
+      :root {
+        --primary-color: #002454; /* Bright Blue (Main Accent) */
+        --accent-color: #00bcd4; /* Teal/Cyan-like secondary color (Highlights) */
+        --text-color: #333; /* Primary Dark Text */
+        --text-faint: #555; /* Secondary Text */
+        --light-bg: #f8f9fa; /* Light Gray Background (Alternate sections) */
+        --section-padding: 80px 0;
+        --max-width: 1200px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: white; /* Main Background */
+      }
+
+      /* --- Header & Navigation --- */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container img {
+        height: 40px;
+        margin-right: 10px;
+        /* Logo displays in natural dark blue color on white background */
+        filter: none;
+      }
+
+      .logo-container span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 600;
+        margin-left: 30px;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Hamburger menu for mobile */
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+      }
+
+      .hamburger .bar {
+        width: 100%;
+        height: 3px;
+        background-color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+
+      .nav-mobile {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+      }
+
+      .nav-mobile.active {
+        display: flex;
+      }
+
+      .nav-mobile a {
+        padding: 10px 30px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 600;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .nav-mobile a:hover {
+        background-color: var(--light-bg);
+        color: var(--primary-color);
+      }
+
+      /* --- Global Section Styles --- */
+      section {
+        padding: var(--section-padding);
+        text-align: center;
+      }
+
+      section:nth-child(even) {
+        background-color: var(--light-bg); /* Light Gray */
+      }
+
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--accent-color);
+        margin: 15px auto 0;
+        border-radius: 2px;
+      }
+
+      /* Remove the accent underline for the Empower section heading */
+      #empower-why h2::after {
+        display: none;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* --- 1. Home Section (Hero) --- */
+      #home {
+        position: relative;
+        padding: 150px 20px;
+        text-align: left;
+        width: 100%;
+        background-image: url("./hero2.png");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+
+      #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.4) 70%
+        );
+
+        z-index: 1;
+      }
+
+      #home .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #home .hero-text {
+        max-width: 600px;
+      }
+
+      #home h1 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+
+      #home h1 span {
+        color: var(--primary-color);
+      }
+
+      #home p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        color: var(--text-faint);
+      }
+
+      .btn-primary {
+        display: inline-block;
+        padding: 14px 35px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* --- Tagline Section (below hero) --- */
+      #tagline {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        position: relative;
+        margin-top: 0;
+        z-index: 3;
+      }
+      #tagline .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      #tagline p {
+        font-size: 1.7rem;
+        margin: 0;
+        color: #fff;
+      }
+
+      /* --- NEW SECTION: Empowering Financial Decisions (Image Left, Text Right) --- */
+      #empower-section {
+        background-color: white;
+        padding: var(--section-padding);
+      }
+
+      .empower-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .empower-grid-reverse {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .empower-grid-reverse .empower-text {
+        order: 1;
+      }
+
+      .empower-grid-reverse .empower-image {
+        order: 2;
+      }
+
+      .empower-image {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .empower-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .empower-text h2 {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+      }
+
+      .empower-text p {
+        font-size: 1.1rem;
+        color: var(--text-faint);
+        line-height: 1.7;
+        margin-bottom: 25px;
+      }
+
+      .empower-text h3 {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin: 25px 0 12px;
+      }
+
+      .empower-text ul {
+        list-style: none;
+        padding: 0;
+        color: var(--text-faint);
+      }
+
+      .empower-text ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 8px;
+      }
+
+      .empower-text ul li::before {
+        content: "★";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        font-size: 0.9em;
+      }
+
+      .who-we-are-section {
+        padding: var(--section-padding);
+      }
+
+      /* --- 2. Services Section --- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        text-align: left;
+      }
+
+      .service-card {
+        background-color: white;
+        padding: 32px 28px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #f1f3f5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ---- Service Icon Badge ---- */
+      .service-card .service-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        border: none; /* teal border */
+        flex-shrink: 0;
+      }
+
+      /* make the inner SVG inherit the teal colour */
+      .service-card .service-icon svg {
+        width: 36px;
+        height: 36px;
+        fill: #00bcd4;
+        /* stroke-width: 1.5;
+        fill: none; */
+      }
+
+      .service-card h3 {
+        color: var(--primary-color);
+        margin: 0 0 14px 0;
+        font-size: 1.25rem;
+      }
+
+      .service-card p {
+        font-size: 1rem;
+        color: var(--text-faint);
+      }
+
+      /* --- 3. Testimonials Section (GRID LAYOUT) --- */
+      #testimonials {
+        background-color: white;
+        color: var(--text-color);
+        position: relative;
+        overflow: hidden;
+      }
+
+      #testimonials h2 {
+        color: var(--primary-color);
+      }
+
+      #testimonials h2::after {
+        background-color: var(--accent-color);
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .testimonial-card-static {
+        background-color: white;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f1f3f5;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .testimonial-card-static:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .testimonial-quote {
+        font-size: 1rem;
+        color: var(--text-faint);
+        line-height: 1.7;
+        margin-bottom: 24px;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: auto;
+      }
+
+      .author-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent-color);
+        flex-shrink: 0;
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .author-info h4 {
+        font-size: 1rem;
+        color: var(--primary-color);
+        margin: 0;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .author-info p {
+        font-size: 0.9rem;
+        color: var(--text-faint);
+        margin: 4px 0 0 0;
+        text-align: left;
+      }
+
+      /* --- 4. About Us Section --- */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        text-align: left;
+      }
+
+      .about-text h3 {
+        color: var(--primary-color);
+        font-size: 1.7rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .about-text ul {
+        list-style: none;
+        padding-left: 0;
+        color: var(--text-faint);
+      }
+
+      .about-text ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 8px;
+      }
+
+      .about-text ul li::before {
+        content: "★";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        font-size: 0.9em;
+      }
+
+      .leadership-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .leader-card {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-top: 5px solid var(--accent-color);
+        text-align: center;
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 15px);
+      }
+
+      .leader-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        border: 3px solid var(--primary-color);
+        display: block;
+      }
+
+      .leader-info h4 {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .leader-info p {
+        font-size: 0.95rem;
+        color: var(--text-faint);
+        line-height: 1.5;
+      }
+
+      /* New horizontal layout for leadership cards */
+      .leadership-grid-redesigned {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-top: 50px;
+      }
+
+      .leader-card-horizontal {
+        display: flex;
+        gap: 30px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f1f3f5;
+        align-items: flex-start;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .leader-card-horizontal:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .leader-image {
+        flex-shrink: 0;
+      }
+
+      .leader-image img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 3px solid var(--accent-color);
+        display: block;
+      }
+
+      .leader-info-horizontal {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .leader-info-horizontal h4 {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        margin: 0 0 8px 0;
+        font-weight: 600;
+      }
+
+      .leader-info-horizontal .leader-title {
+        font-size: 0.95rem;
+        color: var(--accent-color);
+        font-weight: 600;
+        margin: 0 0 12px 0;
+      }
+
+      .leader-info-horizontal .leader-bio {
+        font-size: 0.95rem;
+        color: var(--text-faint);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* --- 5. Contact Section --- */
+      #contact {
+        background-color: white;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 50px;
+        text-align: left;
+        align-items: center;
+      }
+
+      .contact-info {
+        color: var(--text-faint);
+      }
+
+      .contact-info h3 {
+        color: var(--primary-color);
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin-bottom: 18px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: var(--text-color);
+      }
+
+      .contact-info strong {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .contact-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
+        background-color: rgba(0, 188, 212, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-color);
+        flex-shrink: 0;
+      }
+
+      .contact-image-container {
+        width: 100%;
+        height: 350px;
+        background-image: url("./contact3.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* --- Footer --- */
+      .footer {
+        padding: 25px;
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      /* --- CTA Hero Section --- */
+      #cta-hero {
+        background-color: var(--light-bg);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        position: relative;
+        margin-top: 0;
+        z-index: 3;
+      }
+
+      #cta-hero .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      #cta-hero span {
+        font-size: 1.7rem;
+        margin: 0;
+        color: var(--text-color);
+      }
+
+      #cta-hero .accent-text {
+        font-size: 1.7rem;
+        margin: 0;
+        color: var(--primary-color);
+      }
+
+      .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        opacity: 0.9;
+        transition: opacity 0.3s;
+      }
+
+      .footer a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 992px) {
+        .header {
+          padding: 15px 20px;
+        }
+        .nav {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        /* Hero: stack and center text on narrower viewports */
+        #home {
+          padding: 100px 20px;
+          background-position: center top;
+        }
+        #home .container {
+          flex-direction: column;
+          text-align: center;
+        }
+        #home .hero-text {
+          max-width: 100%;
+          margin: 0 auto 30px;
+        }
+        #home h1 {
+          font-size: 2.8rem;
+        }
+        #home p {
+          font-size: 1.1rem;
+        }
+
+        /* Layouts: stack columns into single column where appropriate */
+        .about-content,
+        .contact-grid,
+        .empower-grid,
+        .empower-grid-reverse,
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        /* Who We Are section: reverse order on tablet (text top, image bottom) */
+        .empower-grid .empower-text {
+          order: 1;
+        }
+
+        .empower-grid .empower-image {
+          order: 2;
+        }
+
+        /* Services: keep cards full width and left-aligned content within each card */
+        .service-card {
+          max-width: 100%;
+        }
+
+        /* Leadership: make leader cards full width */
+        .leader-card {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+        .leader-card img {
+          margin: 0 auto 15px;
+        }
+
+        /* Testimonials: single column for readability */
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Contact: stack contact area */
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-image-container {
+          height: 220px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        /* Hero tighter on tablets / small screens */
+        #home {
+          padding: 80px 18px;
+        }
+        #home h1 {
+          font-size: 2.2rem;
+        }
+        #home p {
+          font-size: 1rem;
+        }
+
+        /* Services: reduce padding and icon sizes */
+        .service-card {
+          padding: 24px;
+        }
+        .service-card .service-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 10px;
+        }
+        .service-card .service-icon svg {
+          width: 28px;
+          height: 28px;
+        }
+
+        /* Leadership horizontal -> stacked */
+        .leader-card-horizontal,
+        .leader-image,
+        .leader-info-horizontal {
+          grid-column: 1 / -1;
+        }
+        .leader-card-horizontal {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .leader-image img {
+          width: 120px;
+          height: 120px;
+          border-radius: 12px;
+        }
+
+        /* Testimonials: denser spacing */
+        .testimonial-card-static {
+          padding: 24px;
+        }
+        .author-avatar {
+          width: 40px;
+          height: 40px;
+        }
+
+        .footer {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Small phones */
+        #home {
+          padding: 60px 14px;
+        }
+        #home h1 {
+          font-size: 1.8rem;
+        }
+        #home p {
+          font-size: 0.95rem;
+        }
+        .services-grid {
+          gap: 20px;
+        }
+        .service-card {
+          padding: 20px;
+        }
+        .contact-image-container {
+          height: 180px;
+        }
+        .logo-container span {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header" id="main-header">
+      <div class="logo-container">
+        <img src="Logo.jpeg" alt="Ascend Advisory Logo" />
+        <span>Ascend Advisory</span>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#about">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="nav-mobile" id="mobile-menu">
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#services" onclick="toggleMobileMenu()">Services</a>
+        <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
+        <a href="#about" onclick="toggleMobileMenu()">Team</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+      </nav>
+    </header>
+
+    <!-- 1. Home Section -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-text">
+          <h1>You Have Come to the <span>Right Place</span>.</h1>
+          <p>
+            Stop letting **complicated finances and compliances** stand between
+            you and your ambitious goals. Give us a chance to help you unlock
+            your potential.
+          </p>
+          <a href="#services" class="btn-primary">Explore Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tagline Section -->
+    <section id="tagline" aria-label="Tagline">
+      <div class="container">
+        <p>
+          <strong>Tax & Accounting Simplified.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Who We Are (Image Left, Text Right) -->
+    <section id="who-we-are-section" class="who-we-are-section">
+      <div class="container">
+        <div class="empower-grid">
+          <!-- Left: Image -->
+          <div class="empower-image">
+            <img
+              src="introduce3.png"
+              alt="Team discussing financial decisions"
+            />
+          </div>
+
+          <!-- Right: Text Content - Starts directly with "Who We Are" -->
+          <div class="empower-text">
+            <!-- Who We Are -->
+            <h3
+              style="
+                font-size: 1.8rem;
+                color: var(--primary-color);
+                margin-bottom: 15px;
+              "
+            >
+              Introducing Ascend!
+            </h3>
+            <p
+              style="
+                color: var(--text-faint);
+                line-height: 1.7;
+                margin-bottom: 20px;
+              "
+            >
+              We noticed that **Ambitious business owners were spending too much
+              time wrestling with complex ledgers instead of growing their
+              companies**. That's why we started this firm—to be the expert
+              shield that completely lifts the compliance burden, allowing you
+              to focus on your core genius.
+            </p>
+
+            <!-- Vision & Mission -->
+            <h3
+              style="
+                font-size: 1.6rem;
+                color: var(--primary-color);
+                margin: 25px 0 12px;
+              "
+            >
+              Our Vision & Mission
+            </h3>
+            <p style="color: var(--text-faint)">
+              <strong>Vision:</strong> To be the firm of choice for clients and
+              top-quality professionals, committed to excellence with adherence
+              to the highest values of ethics and objectivity.
+            </p>
+            <p style="color: var(--text-faint); margin-top: 10px">
+              <strong>Mission:</strong> Our intention is to eliminate the
+              financial burden of complex tax and accounting for every client.
+              We achieve this by providing proactive, expert guidance and
+              simplified solutions, ensuring our clients have the clarity and
+              confidence to focus 100% on realizing their dreams.
+            </p>
+
+            <!-- Our Values -->
+            <h3
+              style="
+                font-size: 1.6rem;
+                color: var(--primary-color);
+                margin: 25px 0 12px;
+              "
+            >
+              Our Values
+            </h3>
+            <ul>
+              <li>
+                We are <strong>Client Focused</strong>—making a tangible
+                difference for our clients.
+              </li>
+              <li>
+                We are <strong>Transparent and Straight-Forward</strong> in
+                every engagement.
+              </li>
+              <li>We operate with mutual trust, respect, and cooperation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Services Section -->
+    <section id="services">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                image-rendering="optimizeQuality"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                viewBox="0 0 512 398.66"
+              >
+                <path
+                  fill-rule="nonzero"
+                  d="M41.17 251.8c.46-79.33.89-158.63 1.36-237.65 0-5.26 3.76-9.65 8.71-10.68v-.02c28.93-6.03 74.25-4.5 105.07 7.29 21.29 8.16 40.61 21.17 54.71 39.91 14.26-17.48 33.28-30.06 54.69-38.19 29.25-11.09 73.26-13.77 105-9.12 5.48.79 9.4 5.49 9.4 10.86h.02v83.28a148.25 148.25 0 0 0-20.25-1.39l-1.74.01V23.94c-25.41-2.42-61.83.37-84.72 9.04-21.39 8.11-39.82 21.44-51.8 40.54V192.2c-12.75 34.26-12.75 72.88 1.82 107.98 3.1 7.47 6.79 14.64 11.01 21.43-5.93 1.99-11.84 4.29-17.76 6.91a11.016 11.016 0 0 1-6.24 1.81c-2.23.04-4.4-.6-6.24-1.81-29.48-13.03-58.86-18.19-88.24-18-30.14.19-70.79 6.01-101.43 14.8-1.1.38-2.3.58-3.55.58C4.92 325.9 0 320.98 0 314.92V61.83c0-6.07 4.92-10.99 10.99-10.99h11v249.69c27.75-7.16 65.83-11.74 93.9-11.91 25.91-.15 51.83 3.44 77.78 12.23-16.15-13.07-34.14-22.66-53.32-28.9-24.17-7.9-60.57-10.52-87.32-8.22-6.05.48-11.36-3.99-11.86-10.04-.04-.65-.04-1.28 0-1.89zm321.87-127.61c32.67 0 63.87 12.94 86.93 36.02 31.91 31.89 43.77 78.9 30.93 122.08a122.178 122.178 0 0 1-12.5 28.27l42.06 46.31c2.18 2.4 2.03 6.12-.36 8.32l-34.97 31.92a5.84 5.84 0 0 1-8.29-.37l-39.96-44.5c-19.3 11.75-41.24 17.87-63.84 17.87-32.66 0-63.84-12.91-86.93-36.01a122.782 122.782 0 0 1-26.69-39.92c-19.06-45.9-8.23-99.05 26.69-133.97 11.3-11.3 24.83-20.44 39.93-26.67 14.49-6.03 30.37-9.35 47-9.35zm69.37 53.6c-27.99-28.02-70.43-36.43-106.9-21.32-65.44 27.08-80.48 111.46-31.86 160.05 28.06 27.98 70.42 36.44 106.93 21.33 36.7-15.25 60.56-50.96 60.56-90.71 0-13.31-2.62-25.99-7.39-37.51a98.38 98.38 0 0 0-21.34-31.84zm-33.5-76.46V50.84h10.99c6.08 0 10.99 4.92 10.99 10.99v47.45c-7.09-3.22-14.45-5.88-21.98-7.95zm-157.58 54.49a7.875 7.875 0 0 1 3.17-9.31c2.89-1.85 5.98-3.62 9.22-5.33-4.48 4.63-8.61 9.52-12.39 14.64zm11.81-56.7a7.894 7.894 0 0 1-10.89-2.43c-2.34-3.68-1.24-8.55 2.43-10.88 11.24-7.13 25.64-13.38 40.15-18.07 15.45-4.97 31.21-8.21 43.63-8.91 4.34-.23 8.06 3.09 8.29 7.43.23 4.33-3.09 8.05-7.42 8.28-11.12.63-25.46 3.6-39.69 8.19-13.25 4.26-26.35 9.95-36.5 16.39zm-75.9 108.28c3.65 2.37 4.68 7.26 2.32 10.89-2.36 3.63-7.25 4.68-10.88 2.31-10.05-6.53-23.26-12.33-36.72-16.72-14.48-4.72-29.12-7.8-40.39-8.43-4.33-.23-7.66-3.95-7.42-8.28.23-4.33 3.94-7.66 8.28-7.42 12.65.7 28.74 4.05 44.4 9.14 14.63 4.78 29.16 11.18 40.41 18.51zm-.84-60.89a7.862 7.862 0 0 1 2.4 10.86c-2.33 3.65-7.2 4.73-10.86 2.39-10.09-6.43-23.22-12.13-36.56-16.44-14.28-4.6-28.67-7.59-39.81-8.22-4.33-.23-7.66-3.94-7.42-8.28.23-4.33 3.94-7.66 8.28-7.43 12.45.7 28.28 3.96 43.75 8.95 14.51 4.68 28.93 10.97 40.22 18.17zm-.19-60.7a7.871 7.871 0 0 1 2.43 10.88c-2.33 3.68-7.2 4.76-10.88 2.43-10.16-6.44-23.26-12.13-36.5-16.39-14.23-4.59-28.57-7.56-39.69-8.19-4.33-.23-7.66-3.95-7.42-8.28.23-4.34 3.94-7.66 8.28-7.43 12.43.7 28.19 3.94 43.63 8.91 14.52 4.69 28.92 10.94 40.15 18.07zm23.43 192V73.2c-11.53-20.3-30.12-33.88-51.16-41.93-23.8-9.12-60.79-11.19-84.11-7.86l-1.24 217.71c25.44-.92 60.57 2.32 84 9.95 18.65 6.09 36.31 14.96 52.51 26.74z"
+                />
+              </svg>
+            </div>
+            <h3>Audit & Assurance</h3>
+            <p>
+              Critical role in maintaining investor and authority confidence. We
+              offer IFRS Audit, Limited Reviews, Internal Audits, VAT Audits,
+              RERA certifications, and Statutory accounts to ensure quality and
+              compliance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 122.88 107.37"
+              >
+                <title>business-investment</title>
+                <path
+                  fill-rule="evenodd"
+                  d="M40.07,99.69a3.44,3.44,0,0,1,.52,1.77c0,3.26-5.06,5.91-11.28,5.91S18,104.72,18,101.46a3.45,3.45,0,0,1,.51-1.77c1.44,2.4,5.71,4.14,10.76,4.14s9.33-1.74,10.76-4.14Zm34.74-2.5a4.25,4.25,0,0,1,.64,2.19c0,4.05-6.28,7.35-14,7.35s-14-3.3-14-7.35a4.28,4.28,0,0,1,.64-2.19c1.79,3,7.1,5.14,13.37,5.14S73,100.17,74.81,97.19Zm0-8.88a4.28,4.28,0,0,1,.64,2.2c0,4-6.28,7.34-14,7.34s-14-3.29-14-7.34a4.31,4.31,0,0,1,.64-2.2c1.79,3,7.1,5.15,13.37,5.15S73,91.29,74.81,88.31ZM66.5,69.81l-.16,1.82L59.46,71a6.26,6.26,0,0,1,1.18,2.48L59,73.36a5.48,5.48,0,0,0-.75-1.62,3.35,3.35,0,0,0-1.43-1.28L56.94,69l9.56.83ZM61.44,67C67.79,67,73,69,73,71.47S67.79,76,61.44,76s-11.51-2-11.51-4.52S55.09,67,61.44,67Zm0-1.5c7.73,0,14,3.29,14,7.34s-6.28,7.34-14,7.34-14-3.29-14-7.34,6.28-7.34,14-7.34ZM74.85,79.69a4.14,4.14,0,0,1,.6,2.11c0,4-6.28,7.34-14,7.34s-14-3.29-14-7.34a4.11,4.11,0,0,1,.6-2.11c1.72,3,7.07,5.24,13.41,5.24s11.69-2.22,13.41-5.24ZM35.08,66.39a1.5,1.5,0,1,1-3,0V34.73H3v65.85H8.16a1.5,1.5,0,0,1,0,3H1.49A1.49,1.49,0,0,1,0,102.08V33.93a2.27,2.27,0,0,1,.64-1.56,2.23,2.23,0,0,1,1.56-.64H32.09V2.62A2.56,2.56,0,0,1,32.86.78h0A2.6,2.6,0,0,1,34.71,0H87.93a2.58,2.58,0,0,1,1.85.77l.12.12a2.67,2.67,0,0,1,.66,1.73V31.73h30.12a2.23,2.23,0,0,1,1.55.64h0a2.23,2.23,0,0,1,.64,1.55v68.15a1.49,1.49,0,0,1-1.49,1.49h-7.24a1.5,1.5,0,1,1,0-3h5.75V34.73H90.55V64.84a1.5,1.5,0,1,1-3,0V3H35.08V66.39ZM104,71h8.67c.14,0,.25.08.25.17v4.87c0,.11-.11.19-.25.19H104c-.14,0-.25-.08-.25-.19V71.2c0-.09.11-.17.25-.17Zm-94,0h8.68c.13,0,.25.08.25.17v4.87c0,.11-.12.19-.25.19H10.06c-.13,0-.25-.08-.25-.19V71.2c0-.09.12-.17.25-.17ZM41.77,8.78H80.88A1.2,1.2,0,0,1,82.07,10V23.84A1.2,1.2,0,0,1,80.88,25H41.77a1.2,1.2,0,0,1-1.19-1.19V10a1.19,1.19,0,0,1,1.19-1.19Zm58.9,49.38h12c.14,0,.25.08.25.18v4.87c0,.11-.11.19-.25.19h-12c-.13,0-.25-.08-.25-.19V58.34c0-.1.12-.18.25-.18ZM98.44,46.39h14.25c.14,0,.25.08.25.18v4.88c0,.1-.11.18-.25.18H98.44c-.13,0-.24-.08-.24-.18V46.57c0-.1.11-.18.24-.18ZM10.06,58.16h12c.14,0,.25.08.25.18v4.87c0,.11-.11.19-.25.19h-12c-.13,0-.25-.08-.25-.19V58.34c0-.1.12-.18.25-.18Zm0-11.77H24.31c.14,0,.25.08.25.18v4.88c0,.1-.11.18-.25.18H10.06c-.13,0-.25-.08-.25-.18V46.57c0-.1.12-.18.25-.18Zm62,2.24h8.8a.26.26,0,0,1,.25.25v6.57l-.25.25H72a.26.26,0,0,1-.25-.25V48.88a.26.26,0,0,1,.25-.25Zm-15.12,0h8.8a.26.26,0,0,1,.25.25v6.57a.26.26,0,0,1-.25.25h-8.8a.26.26,0,0,1-.25-.25V48.88a.26.26,0,0,1,.25-.25Zm-15.12,0h8.8a.25.25,0,0,1,.25.25v6.57a.25.25,0,0,1-.25.25H41.8a.26.26,0,0,1-.25-.25V48.88a.26.26,0,0,1,.25-.25ZM72,32.12h8.8a.26.26,0,0,1,.25.25v9.36a.25.25,0,0,1-.25.24H72a.25.25,0,0,1-.25-.24V32.37a.25.25,0,0,1,.25-.25Zm-15.12,0h8.8a.26.26,0,0,1,.25.25v9.36a.25.25,0,0,1-.25.24h-8.8a.25.25,0,0,1-.25-.24V32.37a.25.25,0,0,1,.25-.25Zm-15.12,0h8.8a.25.25,0,0,1,.25.25v9.36a.25.25,0,0,1-.25.24H41.8a.25.25,0,0,1-.25-.24V32.37a.25.25,0,0,1,.25-.25Zm62.53,67.57a3.42,3.42,0,0,1,.51,1.77c0,3.26-5,5.91-11.27,5.91s-11.28-2.65-11.28-5.91a3.46,3.46,0,0,1,.52-1.77c1.44,2.4,5.71,4.14,10.76,4.14s9.33-1.74,10.76-4.14ZM97.64,84.8l-.13,1.47L92,85.78a5.08,5.08,0,0,1,.94,2l-1.33-.11a4.15,4.15,0,0,0-.6-1.31,2.69,2.69,0,0,0-1.15-1L90,84.13l7.69.67Zm-4.07-2.3c5.11,0,9.26,1.63,9.26,3.63s-4.15,3.64-9.26,3.64-9.27-1.63-9.27-3.64,4.15-3.63,9.27-3.63Zm0-1.21c6.22,0,11.27,2.65,11.27,5.92s-5,5.91-11.27,5.91-11.28-2.65-11.28-5.91,5.06-5.92,11.28-5.92Zm10.8,11.46a3.48,3.48,0,0,1,.47,1.7c0,3.26-5,5.91-11.27,5.91s-11.28-2.65-11.28-5.91a3.36,3.36,0,0,1,.48-1.7c1.39,2.44,5.7,4.22,10.8,4.22s9.41-1.78,10.8-4.22Zm-71-8-.13,1.47-5.53-.49a5,5,0,0,1,.94,2l-1.33-.11a4.15,4.15,0,0,0-.6-1.31,2.69,2.69,0,0,0-1.15-1l.11-1.19,7.69.67Zm-4.07-2.3c5.12,0,9.27,1.63,9.27,3.63s-4.15,3.64-9.27,3.64-9.26-1.63-9.26-3.64,4.15-3.63,9.26-3.63Zm0-1.21c6.22,0,11.28,2.65,11.28,5.92s-5.06,5.91-11.28,5.91S18,90.47,18,87.21s5.05-5.92,11.27-5.92Zm10.8,11.46a3.39,3.39,0,0,1,.48,1.7c0,3.26-5.06,5.91-11.28,5.91S18,97.71,18,94.45a3.35,3.35,0,0,1,.47-1.7C19.9,95.19,24.21,97,29.31,97s9.41-1.78,10.8-4.22Z"
+                />
+              </svg>
+            </div>
+            <h3>Taxation & Regulatory Requirements</h3>
+            <p>
+              We guide clients through the UAE's evolving tax landscape,
+              assisting with **Corporate Taxation**, VAT
+              registration/deregistration, Economic Substance Regulation (ESR),
+              Ultimate Beneficial Owner (UBO) requirements, and Anti-Money
+              Laundering (AML) compliance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <!-- Accounting/BPO: Ledger book with calculator -->
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 94.82 122.88"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <title>ledger</title>
+                <path
+                  class="cls-1"
+                  d="M18.12.05h72.3V57H49.22A7.21,7.21,0,0,0,42,64.19V90.05H17.11c-6.74.61-4.35,9.6,0,9.13H42v5.51H17.4c-10.12.14-13.47-.4-13.47-7.81V88.7a4.76,4.76,0,0,1,0-9.37V71.82a4.76,4.76,0,0,1,0-9.37V54.94a4.76,4.76,0,0,1,0-9.37V38.06A4.47,4.47,0,0,1,0,33.37a4.49,4.49,0,0,1,3.93-4.69v-7.5A4.48,4.48,0,0,1,0,16.49,4.48,4.48,0,0,1,3.93,11.8C3.94,2,4.5-.38,18.12.05ZM53.21,64.61H91.49a3.35,3.35,0,0,1,3.33,3.33v51.61a3.32,3.32,0,0,1-1,2.35,3.28,3.28,0,0,1-2.35,1H53.21a3.35,3.35,0,0,1-3.33-3.33V67.94a3.35,3.35,0,0,1,3.33-3.33Zm34.11,8.22H57.39v9.06H87.32V72.83ZM81.67,99.92H87a.83.83,0,0,1,.83.83v4.51a.83.83,0,0,1-.83.83H81.67a.84.84,0,0,1-.84-.83v-4.51a.84.84,0,0,1,.84-.83Zm0-10.7H87a.84.84,0,0,1,.83.84v4.5a.83.83,0,0,1-.83.83H81.67a.84.84,0,0,1-.84-.83v-4.5a.85.85,0,0,1,.84-.84Zm0,21.4H87a.83.83,0,0,1,.83.83V116a.84.84,0,0,1-.83.84H81.67a.84.84,0,0,1-.84-.84v-4.5a.85.85,0,0,1,.84-.83Zm-12-10.7H75a.84.84,0,0,1,.84.83v4.51a.84.84,0,0,1-.84.83H69.63a.84.84,0,0,1-.84-.83v-4.51a.84.84,0,0,1,.84-.83Zm0-10.7H75a.85.85,0,0,1,.84.84v4.5a.84.84,0,0,1-.84.83H69.63a.84.84,0,0,1-.84-.83v-4.5a.85.85,0,0,1,.84-.84Zm0,21.4H75a.84.84,0,0,1,.84.83V116a.85.85,0,0,1-.84.84H69.63a.84.84,0,0,1-.84-.84v-4.5a.85.85,0,0,1,.84-.83ZM57.81,89.22h5.33a.84.84,0,0,1,.84.84v4.5a.84.84,0,0,1-.84.83H57.81a.83.83,0,0,1-.83-.83v-4.5a.84.84,0,0,1,.83-.84Zm0,21.4h5.33a.84.84,0,0,1,.84.83V116a.84.84,0,0,1-.84.84H57.81A.84.84,0,0,1,57,116v-4.5a.84.84,0,0,1,.83-.83Zm0-10.7h5.33a.84.84,0,0,1,.84.83v4.51a.84.84,0,0,1-.84.83H57.81a.83.83,0,0,1-.83-.83v-4.51a.83.83,0,0,1,.83-.83ZM91.49,66.83H53.21a1.11,1.11,0,0,0-1.1,1.11v51.61a1.11,1.11,0,0,0,1.1,1.11H91.49a1.13,1.13,0,0,0,1.11-1.11V67.94a1.13,1.13,0,0,0-1.11-1.11ZM48.26,21.27a2,2,0,0,1-1.72-2.15A2,2,0,0,1,48.26,17H78.53a2,2,0,0,1,1.72,2.15,2,2,0,0,1-1.72,2.15Zm0,21.79a2.2,2.2,0,0,1,0-4.3h19.9a2.2,2.2,0,0,1,0,4.3Zm0-10.9A2,2,0,0,1,46.54,30a2,2,0,0,1,1.72-2.14H72.31A2,2,0,0,1,74,30a2,2,0,0,1-1.72,2.15ZM27,43.31c-.85-.05-1-.12-1.81-.23s-1.42-.2-2.09-.32-1.31-.27-1.93-.43V36.82c.81.07,1.69.13,2.63.17s1.89.09,2.86.11,1.87,0,2.7,0a9,9,0,0,0,2-.18,2.37,2.37,0,0,0,1.18-.57,1.48,1.48,0,0,0,.4-1.08v-.43a1.36,1.36,0,0,0-.56-1.18,2.21,2.21,0,0,0-1.31-.39H29.17q-4.16,0-6.3-1.83t-2.15-6.12V24.18a7.2,7.2,0,0,1,2.36-5.88A6.51,6.51,0,0,1,27,16.47V14.19h5.36v2.2a30.17,30.17,0,0,1,5.81,1v5.51c-1.1-.09-2.33-.17-3.71-.23s-2.62-.09-3.74-.09a9.65,9.65,0,0,0-1.79.15,2.15,2.15,0,0,0-1.21.57,1.66,1.66,0,0,0-.43,1.25v.36a1.66,1.66,0,0,0,.57,1.36,2.75,2.75,0,0,0,1.75.46H32a8.31,8.31,0,0,1,4.16,1,6.17,6.17,0,0,1,2.51,2.58,7.94,7.94,0,0,1,.84,3.7v1.18a9.4,9.4,0,0,1-1.18,5.19A5.8,5.8,0,0,1,35,42.74a9.74,9.74,0,0,1-2.59.56v2.55H27V43.31Z"
+                />
+              </svg>
+            </div>
+            <h3>Accounting & Bookkeeping</h3>
+            <p>
+              Customized accounting solutions, including Bookkeeping, VAT
+              accounting assistance, Management accounts, Payroll assistance,
+              and implementation of new accounting software to maximize internal
+              efficiency.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <!-- Advisory: Lightbulb over rising line chart -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                shape-rendering="geometricPrecision"
+                text-rendering="geometricPrecision"
+                image-rendering="optimizeQuality"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                viewBox="0 0 497 511.56"
+              >
+                <path
+                  fill-rule="nonzero"
+                  d="M300.56 479.77c-7.13 10.81-16.58 19.02-27.16 24.39-18.88 9.69-41.39 10.11-60.11-.19-6.34-3.56-12.19-8.33-17.27-14.39l104.54-9.81zm-.19-302.95c3.34-.07 6.74.49 10.04 1.61 6.24 2.11 12.26 6.24 16.89 11.73 4.66 5.51 7.99 12.45 8.83 20.16.39 3.61.24 7.38-.58 11.23 3.5 3.1 6.4 6.61 8.59 10.35 3.32 5.67 5.05 11.96 4.86 18.35-.18 6.43-2.31 12.87-6.68 18.8-2.8 3.79-6.52 7.36-11.22 10.56.48 9.94-2.44 18.87-7.19 25.75-5.33 7.72-13.07 12.95-21.07 14.36-1.71 7.01-6.33 13.2-12.31 17.49-7.45 5.34-17.19 7.84-26.06 5.41-6.62-1.82-12.65-6.23-16.75-14.05-4.99 8.58-11.9 13.11-19.13 14.61-8.59 1.78-17.48-.85-24.17-6.05-5.44-4.24-9.51-10.26-10.89-17.06-2.83-.1-5.69-.65-8.48-1.6-6.08-2.05-11.96-6.05-16.56-11.36-4.6-5.31-7.97-12-9.01-19.45-.55-3.94-.46-8.07.44-12.3-3.09-2.76-5.73-5.89-7.8-9.26-3.49-5.66-5.42-12.06-5.34-18.67.07-6.63 2.18-13.36 6.76-19.59 2.7-3.69 6.29-7.2 10.84-10.42-.07-1.3-.07-2.58-.03-3.84.36-9.69 3.94-18.22 9.14-24.58 5.37-6.58 12.6-10.92 20.03-11.95h.04c.27-1.21.62-2.41 1.05-3.58 2.4-6.51 7.35-12.07 13.42-15.6 6.09-3.55 13.42-5.11 20.56-3.63 6.88 1.43 13.47 5.6 18.4 13.41 4.93-7.81 11.52-11.98 18.4-13.41 6.49-1.35 13.15-.18 18.89 2.71 5.66 2.86 10.5 7.44 13.47 12.95 1.18 2.19 2.07 4.51 2.62 6.92zm-46.02 4.16v128.75c.59.78 1 1.71 1.17 2.74 1.85 11.23 6.73 16.65 12.22 18.16 5.06 1.38 10.89-.24 15.53-3.57 4.55-3.26 7.81-8.06 7.85-13.09.05-5.72-4.14-12.21-15.36-17.94a6.219 6.219 0 0 1-2.7-8.36 6.21 6.21 0 0 1 8.36-2.71c12.44 6.36 18.89 14.18 21.16 22.04 4.11-1.28 8.1-4.37 11.09-8.71 3.69-5.35 5.8-12.54 4.79-20.6-.56-2.57.56-5.32 2.96-6.72 4.85-2.83 8.45-6.01 10.9-9.33 2.79-3.78 4.14-7.8 4.26-11.73.11-3.97-1.03-7.99-3.21-11.72-1.99-3.4-4.83-6.55-8.35-9.19a6.243 6.243 0 0 1-2.44-7.18c1.2-3.53 1.52-6.97 1.17-10.18-.56-5.07-2.8-9.71-5.96-13.44-3.17-3.75-7.22-6.56-11.38-7.97-2.18-.74-4.36-1.07-6.38-.93-1.07 3.69-3.04 7.41-6.08 11.03-2.21 2.62-6.13 2.96-8.75.75a6.21 6.21 0 0 1-.76-8.74c4.85-5.75 4.88-11.8 2.34-16.54-1.76-3.25-4.68-6-8.11-7.73-3.36-1.69-7.15-2.39-10.74-1.65-5.27 1.1-10.36 5.46-13.58 14.56zm31.76 42.21a6.227 6.227 0 0 1-1.37-8.68 6.227 6.227 0 0 1 8.68-1.37c1.29.94 2.48 1.91 3.57 2.89 8.3 7.46 12.83 17.32 13.65 27.53.83 10.09-1.99 20.54-8.36 29.29-.87 1.21-1.89 2.46-3.06 3.75-2.29 2.54-6.23 2.74-8.77.43a6.203 6.203 0 0 1-.44-8.77c.71-.8 1.45-1.71 2.18-2.72 4.58-6.3 6.61-13.79 6.03-21.01-.58-7.12-3.75-14.01-9.54-19.24-.82-.76-1.69-1.46-2.57-2.1zm-44.25-35.71-.04-.05-.04-.06-.11-.18-.01-.02-.25-.47-.03-.05-.01-.01-.02-.06-.09-.21-.03-.05-.03-.06v-.02l-.02-.05-.08-.2-.01-.03-.01-.04-.03-.11-.01-.03-.02-.06-.01-.05-.01-.03-.02-.06-.01-.06-.01-.01-.02-.08-.01-.05c-3-12.13-8.83-17.69-14.88-18.95-3.97-.83-8.19.12-11.78 2.21-3.64 2.12-6.57 5.37-7.95 9.12-1.85 5.01-.76 11.17 5.49 16.95 2.51 2.33 2.66 6.27.34 8.78-2.33 2.52-6.27 2.67-8.78.34-4.93-4.56-7.92-9.41-9.35-14.23-3.91.9-7.79 3.49-10.89 7.28-3.62 4.39-6.1 10.34-6.35 17.14-.07 1.8.03 3.7.3 5.67.32 2.36-.74 4.81-2.89 6.14-4.69 2.89-8.18 6.07-10.61 9.38-2.96 4.04-4.32 8.27-4.37 12.37-.05 4.12 1.23 8.24 3.53 11.99 1.94 3.15 4.6 6.01 7.79 8.38a6.238 6.238 0 0 1 2.36 7.13c-1.28 3.78-1.55 7.46-1.07 10.88.69 4.92 2.96 9.41 6.08 13.01 3.13 3.62 7.09 6.33 11.15 7.7 1.72.59 3.43.92 5.08.97 2.44-8.07 9.14-16.15 21.91-22.68 3.06-1.56 6.81-.35 8.37 2.71 1.56 3.05.35 6.8-2.71 8.36-11.81 6.03-16.25 12.99-16.24 19.05 0 4.71 2.69 9.15 6.62 12.2 3.99 3.11 9.15 4.71 13.97 3.71 6.06-1.26 11.9-6.84 14.89-19.01.19-.75.5-1.44.92-2.04V187.48zm-46.25 29.84a6.223 6.223 0 0 1 8.8.07c2.41 2.45 2.37 6.39-.07 8.8-5.5 5.4-8.37 12.39-8.67 19.54-.31 7.35 2.09 14.91 7.11 21.14 2.15 2.67 1.73 6.59-.95 8.75a6.234 6.234 0 0 1-8.75-.95c-6.95-8.63-10.27-19.15-9.84-29.44.42-10.21 4.52-20.2 12.37-27.91zm-48.62 140.57c-5.61-7.17-11.33-14.49-16.86-22.89-5.62-8.56-10.91-18.04-15.41-29.18-4.41-11.02-7.71-22.14-9.71-33.37-2-11.28-2.73-22.74-2-34.38v-.03c.74-11.56 2.92-23.27 6.7-35.1 3.75-11.78 9.04-23.58 16-35.36l.57-.87c8.9-13.35 19.3-24.43 30.72-33.36a134.777 134.777 0 0 1 39.26-21.32l.76-.22c10.92-3.72 22.12-6.03 33.32-7.01 11.85-1.04 23.83-.63 35.63 1.11 11.55 1.7 22.9 4.69 33.74 8.84 10.81 4.14 21.2 9.5 30.87 15.95 12.53 8.37 23.81 18.62 33.2 30.51 8.97 11.37 16.2 24.24 21.09 38.39h.04c2.64 7.68 4.79 15.87 6.22 24.53a140.55 140.55 0 0 1 1.86 26.85c-.25 9.65-1.53 19.62-4.02 29.81-2.34 9.51-5.76 19.27-10.43 29.2-9.56 20.39-25.92 40.64-41.95 60.47-8.32 10.31-16.57 20.52-23.56 30.4-2.31 3.29-6.35 4.65-10.04 3.72-21.99-1.69-95.08 8.83-122.11 11.34a9.436 9.436 0 0 1-9.95-6.89c-2.73-9.87-6.34-19.75-10.59-28.79-3.96-8.43-8.48-16.12-13.35-22.35zm-1.09-33.26c5.06 7.68 10.56 14.73 15.97 21.64 5.75 7.35 11.02 16.29 15.57 25.97 3.62 7.7 6.8 15.89 9.44 24.16l113.67-10.57c6.55-8.95 13.89-18.04 21.31-27.21 15.37-19.02 31.05-38.43 39.58-56.62 4.11-8.74 7.12-17.32 9.16-25.66 2.19-8.89 3.29-17.51 3.51-25.8.21-8.08-.39-15.88-1.63-23.38-1.23-7.38-3.12-14.54-5.49-21.42l.04-.01c-4.18-12.08-10.37-23.09-18.06-32.83-8.11-10.27-17.94-19.17-28.9-26.51-8.37-5.58-17.49-10.27-27.1-13.95-9.58-3.67-19.59-6.31-29.74-7.8-10.32-1.52-20.83-1.87-31.26-.96-9.86.86-19.55 2.83-28.82 5.98l-.74.28c-11.97 4.12-23.39 10.17-33.79 18.3-9.79 7.65-18.75 17.2-26.49 28.74l-.13.23c-6.3 10.66-11.03 21.14-14.3 31.43-3.27 10.24-5.16 20.44-5.81 30.58-.63 10.06.02 20.05 1.78 29.97 1.78 9.98 4.69 19.85 8.6 29.6 4 9.91 8.68 18.3 13.63 25.84zm157.09 79.94h.04-.04zm.05-.01c.03 0 .08-.01 0 0zM257.49 15.44c.38-4.64 2.57-8.66 5.84-11.44 3.19-2.73 7.46-4.25 11.98-3.96V0c.39.02.77.08 1.15.15 4.2.57 7.89 2.7 10.46 5.7 2.74 3.19 4.25 7.42 3.96 11.98h.05c-.02.3-.04.6-.09.85l-2.86 35.64h.04c-.01.38-.08.76-.14 1.15-.58 4.24-2.7 7.89-5.71 10.46a16.827 16.827 0 0 1-11.98 3.96v.04c-.38-.02-.76-.08-1.14-.14-4.25-.58-7.9-2.7-10.47-5.71a16.827 16.827 0 0 1-3.96-11.98h-.04c.02-.3.03-.6.09-.85l2.82-35.81zM70 67.85a16.903 16.903 0 0 1-4.69-11.93 16.7 16.7 0 0 1 5.09-11.74 16.86 16.86 0 0 1 11.93-4.69c4.27.06 8.54 1.79 11.74 5.09l25.41 26.41c3.19 3.34 4.75 7.66 4.69 11.93-.07 4.32-1.8 8.54-5.09 11.74a16.91 16.91 0 0 1-11.94 4.69c-4.31-.07-8.54-1.8-11.73-5.1L70 67.85zm-53.88 181.6c-4.52-.16-8.56-2.14-11.47-5.16A16.888 16.888 0 0 1 0 232.31c.08-4.61 2.07-8.78 5.18-11.73 3.11-2.95 7.31-4.73 11.97-4.6l36.6.77c4.62.08 8.78 2.06 11.73 5.17 2.96 3.12 4.73 7.32 4.61 11.97l-.02.26h.04l-.07.6c-.32 4.3-2.24 8.08-5.13 10.88-3.11 2.94-7.31 4.68-11.97 4.6l-.25-.02-.01.05-.38-.02-36.18-.79zm463.48-26.53.55-.01c4.37-.02 8.34 1.61 11.35 4.34 3.18 2.87 5.22 7 5.48 11.59l-.01.17c.05 0 .02.47.02.55.01 4.37-1.62 8.34-4.35 11.36-2.87 3.17-7 5.21-11.59 5.47l-36.57 1.84c-4.63.22-8.9-1.47-12.04-4.33-3.18-2.87-5.26-7-5.48-11.59a16.74 16.74 0 0 1 4.34-12.04c2.87-3.17 7-5.26 11.59-5.47 12.22-.66 24.49-1.4 36.71-1.88zM415.57 73.46c2.81-3.69 6.78-5.87 11-6.5 4.23-.57 8.66.44 12.4 3.21l.04.04a16.55 16.55 0 0 1 6.5 11.01c.58 4.22-.44 8.65-3.21 12.39l-22 29.29c-2.77 3.69-6.78 5.91-11.05 6.53-4.22.58-8.65-.43-12.4-3.2-3.69-2.77-5.91-6.83-6.53-11.05-.58-4.22.43-8.66 3.2-12.4l22.05-29.32zM313.62 422.3l-.26 6.79.03 2.36c.13 4.45-.06 8.94-.57 13.36l-2.57 9.67-126.67 11.8-1.91-5.14-3.82-20.36.22-5.82 135.55-12.66z"
+                />
+              </svg>
+            </div>
+            <h3>Advisory</h3>
+            <p>
+              Objective and independent advice to unlock your business's highest
+              potential. Services include Management Consulting, Transaction
+              Advisory & Restructuring, Financial Due Diligence, Business
+              Valuation, and Diagnostic Studies.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <!-- Company Secretarial: Briefcase with official seal -->
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 122.88 100.54"
+                style="enable-background: new 0 0 122.88 100.54"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M65.98,54.6H56.9c-0.15,0-0.27,0.06-0.37,0.15c-0.1,0.1-0.15,0.23-0.15,0.37v19.14c0,0.15,0.06,0.27,0.15,0.37 c0.1,0.1,0.23,0.15,0.37,0.15h9.07c0.15,0,0.27-0.06,0.37-0.15c0.1-0.1,0.15-0.23,0.15-0.37V55.12c0-0.15-0.06-0.27-0.15-0.37 C66.25,54.64,66.12,54.6,65.98,54.6L65.98,54.6L65.98,54.6z M6.98,13.97h31.49V4.94c0-1.37,0.56-2.6,1.45-3.49 C40.82,0.56,42.06,0,43.41,0h36.06c1.37,0,2.59,0.56,3.49,1.45c0.89,0.89,1.45,2.14,1.45,3.49v9.03h31.49 c1.93,0,3.67,0.79,4.92,2.06c1.27,1.27,2.06,3.01,2.06,4.92v16.86c-7.89,5.41-16.03,10.02-24.42,13.78 c-8.44,3.78-17.14,6.71-26.14,8.73v-6.74c0-1.54-0.63-2.96-1.64-3.98c-1.01-1.01-2.43-1.64-3.98-1.64H56.17l0,0 c-1.54,0-2.96,0.63-3.98,1.64c-1.01,1.01-1.64,2.43-1.64,3.98v6.59c-8.76-2.01-17.25-4.89-25.48-8.58 C16.45,47.73,8.1,42.96,0,37.36V20.95c0-1.93,0.79-3.67,2.06-4.92C3.32,14.76,5.07,13.97,6.98,13.97L6.98,13.97L6.98,13.97z M122.88,47.81v45.76c0,1.93-0.79,3.67-2.06,4.92c-1.27,1.27-3.01,2.06-4.92,2.06H6.98c-1.93,0-3.67-0.79-4.92-2.06 C0.79,97.22,0,95.48,0,93.57V47.39c6.89,4.42,13.98,8.28,21.27,11.55c9.41,4.22,19.17,7.45,29.29,9.61v7.25 c0,1.54,0.63,2.96,1.64,3.98c1.01,1.01,2.44,1.64,3.98,1.64h10.53c1.54,0,2.96-0.63,3.98-1.64c1.01-1.01,1.64-2.43,1.64-3.98v-7.6 l0.11,0.46c10.31-2.17,20.25-5.43,29.83-9.73C109.33,55.77,116.2,52.05,122.88,47.81L122.88,47.81z M75.71,6.73H47.19 c-0.17,0-0.31,0.06-0.44,0.19c-0.1,0.1-0.19,0.27-0.19,0.44v6.42h29.75V7.36c0-0.17-0.06-0.31-0.19-0.44 c-0.1-0.1-0.27-0.19-0.44-0.19H75.71L75.71,6.73z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <h3>Company Secretarial & Other Services</h3>
+            <p>
+              Specialist support for complex legal and corporate procedures,
+              including Corporate Secretarial services, Advisory on
+              HR/Employment matters, Company Formation/Liquidation, and guidance
+              on Corporate Governance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Empowering Section (Text Left, Image Right) -->
+    <section id="empower-why">
+      <div class="container">
+        <div class="empower-grid-reverse">
+          <!-- Left: Text Content -->
+          <div class="empower-text">
+            <h2>Our Process</h2>
+            <p>
+              This is our **robust process and proven roadmap** for eliminating
+              your financial burden and delivering predictable results
+            </p>
+            <ul>
+              <li>
+                <strong>Understanding : </strong>Initial Consultation to
+                identify business goals & challenges
+              </li>
+              <li>
+                <strong>Strategic Planning : </strong>Tailored scope, proposal,
+                and execution roadmap
+              </li>
+              <li>
+                <strong>Implementation : </strong>Accounting, auditing, VAT, and
+                compliance work delivered precisely.
+              </li>
+              <li>
+                <strong>Review & Feedback : </strong>Periodic discussions for
+                continuous improvement.
+              </li>
+              <li>
+                <strong>Ongoing Partnership : </strong>Long-term support as your
+                trusted financial advisor.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="empower-image">
+            <img src="process1.png" alt="Team making financial decisions" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Testimonials Section (3-CARD GRID) -->
+    <section id="testimonials">
+      <div class="container">
+        <h2>Their Confidence is Our Foundation</h2>
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card-static">
+            <p class="testimonial-quote">
+              "They are great to deal with. Took over our process and made
+              significant improvements. Happy to recommend them."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://placehold.co/150/007bff/F4F4F9?text=MY"
+                alt="Mohammed Yousuf"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>Mohammed Yousuf</h4>
+                <p>Building Material Supplier</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card-static">
+            <p class="testimonial-quote">
+              "Called them for CT Filing at the last moment. Very grateful to
+              say, they didn't over charge and did the work in same day."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://placehold.co/150/007bff/F4F4F9?text=AS"
+                alt="Abdul Saad"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>Abdul Saad</h4>
+                <p>Import Export Trader</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card-static">
+            <p class="testimonial-quote">
+              "Still connected with them. Never had problem with our accounts
+              since we hired them and we always get timely reports."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://placehold.co/150/007bff/F4F4F9?text=MC"
+                alt="Manish Chattani"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>Manish Chattani</h4>
+                <p>CEO, Training Institute</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About Us Section -->
+    <section id="about">
+      <div class="container">
+        <h2>Our Team</h2>
+        <div class="leadership-grid-redesigned">
+          <!-- Partner 1 -->
+          <div class="leader-card-horizontal">
+            <div class="leader-image">
+              <img
+                src="https://placehold.co/150/007bff/F4F4F9?text=KG"
+                alt="CA Kiran Gangwani"
+              />
+            </div>
+            <div class="leader-info-horizontal">
+              <h4>CA Kiran Gangwani</h4>
+              <p class="leader-title">Founding Partner</p>
+              <p class="leader-bio">
+                4+ years experience in audit, accounting, and advisory in UAE
+                and 10+ years experience in India.
+              </p>
+            </div>
+          </div>
+
+          <!-- Partner 2 -->
+          <div class="leader-card-horizontal">
+            <div class="leader-image">
+              <img
+                src="https://placehold.co/150/007bff/F4F4F9?text=KN"
+                alt="CA Karan Nandwani"
+              />
+            </div>
+            <div class="leader-info-horizontal">
+              <h4>CA Karan Nandwani</h4>
+              <p class="leader-title">Associate Partner</p>
+              <p class="leader-bio">
+                6+ years experience in audit, accounting, and advisory in UAE
+                and 10+ years experience in India.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Details</h3>
+            <p>
+              Have questions or ready to discuss your business needs? Reach out
+              to us directly.
+            </p>
+            <p>
+              Our dedicated team is here to provide clarity and strategic
+              solutions for your operations in the UAE.
+            </p>
+            <br />
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1.5C8.41 1.5 5.5 4.41 5.5 8c0 4.5 6.5 12 6.5 12s6.5-7.5 6.5-12c0-3.59-2.91-6.5-6.5-6.5zm0 9c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p><strong>Office:</strong></p>
+                <p>Near Sahara Centre, Al Nahda, Sharjah, U.A.E</p>
+                <!--<p style="margin-top: 12px"><strong>Sharjah Office:</strong></p>
+                <p>
+                  E-LOB Office No. E2-115F-45, Hamriyah Free Zone, Sharjah,
+                  U.A.E.
+                </p>-->
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-item" style="margin-top: 20px">
+              <div class="contact-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p><strong>Email us:</strong></p>
+                <p>info@ascendservices.ae</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-item" style="margin-top: 20px">
+              <div class="contact-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.29 21 3 14.71 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p><strong>Call us:</strong></p>
+                <p>+971 544 544 589</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-image-container">
+            <!-- Image placeholder for Contact Section -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta-hero" aria-label="Call to Action">
+      <div class="container">
+        <p>
+          <strong><span>Connect. Consult.</span> <span class="accent-text"> Ascend.</span></strong>
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Ascend Advisory Services FZE. All Rights Reserved.</p>
+        <div>
+          <a href="#home">Privacy Policy</a> |
+          <a href="#home">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple mobile menu toggle logic
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const header = document.getElementById("main-header");
+
+        if (!mobileMenu || !header) return;
+
+        const headerHeight = header.offsetHeight;
+        mobileMenu.style.top = headerHeight + "px";
+
+        mobileMenu.classList.toggle("active");
+
+        const navLinks = mobileMenu.querySelectorAll("a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
